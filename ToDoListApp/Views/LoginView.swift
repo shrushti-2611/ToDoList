@@ -9,68 +9,69 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State var email = ""
-    @State var password = ""
+    @StateObject var viewModel = LoginViewViewModel()
 
     
     var body: some View {
-        VStack {
-            HeaderView()
-            
-            Spacer()
-            
-            Text("Organise your work and \n life, finally!")
-                .font(.title2)
-                .foregroundColor(Color(hue: 0.963, saturation: 0.633, brightness: 0.553))
-                .fontWeight(.medium)
-        
-            //LoginForm
-            Form {
-                TextField("Email", text: $email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                SecureField("Password", text: $password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                Button{
-                    //Attempt login
-                } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(.teal)
-                        
-                        Text("Login")
-                            .font(.title2)
-                            .fontWeight(.medium)
-                            .foregroundColor(Color(hue: 0.963, saturation: 0.633, brightness: 0.553))
-                    }
-                }
-                .frame(width: 300)
-                .padding(.leading)
-
-
-            }
-            
-            //Create Acc
-            
+        NavigationView{
             VStack {
-                Text("New here? Let's get started!")
-                    .font(.title3)
-                    .foregroundColor(Color(hue: 0.963, saturation: 0.633, brightness: 0.553))
-                    .fontWeight(.medium)
+
+                HeaderView(angle: 20)
                 
-                Button {
-                    //create acc
-                } label: {
-                    Text("Create an account")
-                        .foregroundColor(Color(hue: 0.963, saturation: 0.633, brightness: 0.553))
-                        .underline()
+                Text("Organise your work and \n life, finally!")
+                    .font(.title2)
+                    .foregroundColor(Color(hex: 0xA84448))
+                    .fontWeight(.bold)
+                Spacer().frame(height: 15)
+                if !viewModel.errorMessage.isEmpty {
+                    Text(viewModel.errorMessage)
+                        .foregroundColor(Color(hex: 0xA84448))
+                }
+                //LoginForm
+                VStack {
+                    TextField("Email", text: $viewModel.email)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
+                        .frame(width: 300,height: 40)
+                        .foregroundColor(Color(hex: 0xA84448))
+                    
+                    Spacer().frame(height: 10)
+                    
+                    SecureField("Password", text: $viewModel.password)
+                        .textFieldStyle(DefaultTextFieldStyle())
+                        .frame(width: 300,height: 40)
+                        .foregroundColor(Color(hex: 0xA84448))
+                    
+                    Spacer().frame(height: 35)
+                    
+                    TLButton(title: "Login", action: {
+                        viewModel.login()
+                    })
+                    .frame(width: 300, height: 40)
+                    .padding()
+                    
+                    
+                }
+                .padding()
+                
+                //Create Acc
+                
+                VStack {
+                    Text("New here? Let's get started!")
+                        .font(.title3)
+                        .foregroundColor(Color(hex: 0xA84448))
+                        .fontWeight(.light)
+                    
+                    
+                    NavigationLink("Create an account", destination: RegisterView())
                 }
                 
+                Spacer()
             }
-            
-            Spacer()
         }
-
+        .background(Color(hex: 0xFEFCF9))
+        
     }
 }
 
