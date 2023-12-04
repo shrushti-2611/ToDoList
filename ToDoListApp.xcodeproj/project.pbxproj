@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4807C90B2B170EFD00CAD112 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807C90A2B170EFD00CAD112 /* TasksView.swift */; };
+		4807C90D2B1761A100CAD112 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807C90C2B1761A100CAD112 /* Extensions.swift */; };
 		48A9E5982B15A42300BD2AFA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9E5972B15A42300BD2AFA /* ProfileView.swift */; };
 		48A9E59A2B15A46800BD2AFA /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9E5992B15A46800BD2AFA /* ToDoListView.swift */; };
 		48A9E59C2B15A4C100BD2AFA /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A9E59B2B15A4C100BD2AFA /* NewItemView.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		4807C90A2B170EFD00CAD112 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		4807C90C2B1761A100CAD112 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		48A9E5972B15A42300BD2AFA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		48A9E5992B15A46800BD2AFA /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 		48A9E59B2B15A4C100BD2AFA /* NewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				48DC05D82B149C4D00667DBF /* GoogleService-Info.plist */,
 				48DC05C32B14946300667DBF /* ToDoListAppApp.swift */,
 				48A9E5B72B15E85700BD2AFA /* MultilineTextView.swift */,
+				4807C90C2B1761A100CAD112 /* Extensions.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				48A9E5B82B15E85700BD2AFA /* MultilineTextView.swift in Sources */,
 				48A9E5B42B15A62300BD2AFA /* ToDoListItemsViewViewModel.swift in Sources */,
 				48A9E5982B15A42300BD2AFA /* ProfileView.swift in Sources */,
+				4807C90D2B1761A100CAD112 /* Extensions.swift in Sources */,
 				48A9E5BA2B16096B00BD2AFA /* TLButton.swift in Sources */,
 				4807C90B2B170EFD00CAD112 /* TasksView.swift in Sources */,
 				48A9E5AA2B15A5B800BD2AFA /* ProfileViewViewModel.swift in Sources */,

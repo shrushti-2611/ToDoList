@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ToDoListView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                Text("To do list")
+            }
+                .navigationTitle("To Do List")
+
+        }
     }
 }
 
